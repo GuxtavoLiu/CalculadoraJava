@@ -14,6 +14,7 @@ import util.Dividir;
 import util.Multiplicar;
 import util.Somar;
 import util.Subtrair;
+import javax.swing.JLabel;
 
 public class Calculadora extends JFrame {
 
@@ -50,12 +51,12 @@ public class Calculadora extends JFrame {
 		contentPane.setLayout(null);
 
 		CampoValor1 = new JTextField();
-		CampoValor1.setBounds(12, 12, 114, 19);
+		CampoValor1.setBounds(12, 53, 114, 19);
 		contentPane.add(CampoValor1);
 		CampoValor1.setColumns(10);
 
 		CampoValor2 = new JTextField();
-		CampoValor2.setBounds(138, 12, 114, 19);
+		CampoValor2.setBounds(138, 53, 114, 19);
 		contentPane.add(CampoValor2);
 		CampoValor2.setColumns(10);
 
@@ -69,7 +70,7 @@ public class Calculadora extends JFrame {
 				campoResultado.setText(resultado.toString());
 			}
 		});
-		btnSomar.setBounds(12, 50, 50, 25);
+		btnSomar.setBounds(12, 95, 50, 25);
 		contentPane.add(btnSomar);
 
 		JButton btnSubtrair = new JButton("-");
@@ -82,7 +83,7 @@ public class Calculadora extends JFrame {
 				campoResultado.setText(resultado.toString());
 			}
 		});
-		btnSubtrair.setBounds(12, 79, 50, 25);
+		btnSubtrair.setBounds(12, 124, 50, 25);
 		contentPane.add(btnSubtrair);
 
 		JButton btnDividir = new JButton("/");
@@ -94,7 +95,7 @@ public class Calculadora extends JFrame {
 				campoResultado.setText(resultado.toString());
 			}
 		});
-		btnDividir.setBounds(12, 116, 50, 25);
+		btnDividir.setBounds(12, 161, 50, 25);
 		contentPane.add(btnDividir);
 
 		JButton btnMultiplicar = new JButton("*");
@@ -108,12 +109,24 @@ public class Calculadora extends JFrame {
 				campoResultado.setText(resultado.toString());
 			}
 		});
-		btnMultiplicar.setBounds(12, 156, 50, 25);
+		btnMultiplicar.setBounds(12, 201, 50, 25);
 		contentPane.add(btnMultiplicar);
 
 		campoResultado = new JTextField();
-		campoResultado.setBounds(12, 193, 136, 67);
+		campoResultado.setBounds(176, 114, 256, 19);
 		contentPane.add(campoResultado);
 		campoResultado.setColumns(10);
+		
+		JLabel lblResultado = new JLabel("Resultado");
+		lblResultado.setBounds(176, 84, 110, 15);
+		contentPane.add(lblResultado);
+		
+		JLabel lblValor = new JLabel("Valor 1");
+		lblValor.setBounds(12, 35, 70, 15);
+		contentPane.add(lblValor);
+		
+		JLabel lblValor_1 = new JLabel("Valor 2");
+		lblValor_1.setBounds(138, 35, 70, 15);
+		contentPane.add(lblValor_1);
 	}
 }
